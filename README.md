@@ -1,27 +1,33 @@
-# Calculator Html
+# Calculator Html               
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>Simple Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="gallery">
-        <div class="gallery-grid">
-            <img src="image1.jpg" alt="Image 1" onclick="openModal(this.src)">
-            <img src="image2.jpg" alt="Image 2" onclick="openModal(this.src)">
-            <img src="image3.jpg" alt="Image 3" onclick="openModal(this.src)">
-            <img src="image4.jpg" alt="Image 4" onclick="openModal(this.src)">
-            <img src="image5.jpg" alt="Image 5" onclick="openModal(this.src)">
-            <img src="image6.jpg" alt="Image 6" onclick="openModal(this.src)">
+    <div class="calculator">
+        <input type="text" id="display" disabled />
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="appendToDisplay('+')">+</button>
         </div>
-    </div>
-
-    <div class="modal" id="modal" onclick="closeModal()">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modal-img">
     </div>
 
     <script src="script.js"></script>
